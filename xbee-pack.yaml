@@ -3,11 +3,12 @@ schema-version: 1.0
 type: provider
 
 var:
-  version:
-  masterVersion:
-  ifname: eth1
   memory: 512
   cpus: 1
+  ifname: eth1
+#hostVersion is set by xbee
+  hostVersion:
+#ova is defined by the system pack used to launch the vm
   ova:
 
 const:
@@ -16,7 +17,7 @@ const:
 
 provision:
   - url:
-      from: https://download.virtualbox.org/virtualbox/{{ .pack.masterVersion }}/VBoxGuestAdditions_{{ .pack.masterVersion }}.iso
+      from: https://download.virtualbox.org/virtualbox/{{ .pack.hostVersion }}/VBoxGuestAdditions_{{ .pack.hostVersion }}.iso
       to: /tmp
       unpack: false
       after: "{{ .templates }}/install.sh"

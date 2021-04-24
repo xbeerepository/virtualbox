@@ -1,5 +1,5 @@
 labels:
   os: windows
-execute: "{{ .xbee.cache }}/{% path %}/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbee.name %}.exe"
+execute: "{{ .xbee.cache }}/{% path %}/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbeeName %}.exe"
 
 
