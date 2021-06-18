@@ -3,6 +3,6 @@ labels:
 actions:
   - url:
       from: https://{% path %}/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbeeName %}-{% xbeeVersion %}.zip
-      to: "{{ .xbee.cache }}/{% path %}/{{ .xbee.os }}_{{ .xbee.arch }}"
+      todir: "{{ .xbee.cache }}/{% path %}/{{ .xbee.os }}_{{ .xbee.arch }}"
 
 
