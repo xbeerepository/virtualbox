@@ -6,3 +6,4 @@ sh /tmp/vbox/VBoxLinuxAdditions.run \
 umount /tmp/vbox;
 rm -rf /tmp/vbox;
 rm /tmp/VBoxGuestAdditions_{{ .pack.hostVersion }}.iso;
+
