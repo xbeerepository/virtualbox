@@ -21,6 +21,13 @@ provision:
       todir: /tmp
       unpack: false
     after: "{{ .templates }}/install.sh"
+  - shell:
+      cmd: "VBoxControl --nologo guestproperty get /VirtualBox/GuestInfo/Net/0/MAC | cut -d: -f2 | sed -e 's/^[[:space:]]*//' | sed 's/../&:/g;s/:$//'"
+      out: mac1
+  - shell:
+      cmd: "VBoxControl --nologo guestproperty get /VirtualBox/GuestInfo/Net/1/MAC | cut -d: -f2 | sed -e 's/^[[:space:]]*//' | sed 's/../&:/g;s/:$//'"
+      out: mac2
+
 
 command:
   hostdata: "{{ .templates }}/hostdata.sh"
