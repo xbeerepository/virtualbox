@@ -21,10 +21,10 @@ provision:
       unpack: false
     after: "{{ .templates }}/install.sh"
   - shell:
-      cmd: "VBoxControl --nologo guestproperty get /VirtualBox/GuestInfo/Net/0/MAC | cut -d: -f2 | sed -e 's/^[[:space:]]*//' | sed 's/../&:/g;s/:$//'"
+      cmd: "VBoxControl --nologo guestproperty get mac1 | cut -c 8-"
       out: mac1
   - shell:
-      cmd: "VBoxControl --nologo guestproperty get /VirtualBox/GuestInfo/Net/1/MAC | cut -d: -f2 | sed -e 's/^[[:space:]]*//' | sed 's/../&:/g;s/:$//'"
+      cmd: "VBoxControl --nologo guestproperty get mac2 | cut -c 8-"
       out: mac2
 
 
