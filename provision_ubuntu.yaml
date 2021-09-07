@@ -1,6 +1,7 @@
 labels:
   osid: ubuntu
 actions:
+  - pkg: bzip2
   - shell: "{{ .templates }}/network_ubuntu.sh"
 
   
