@@ -19,7 +19,7 @@ provision:
       from: https://download.virtualbox.org/virtualbox/{{ .pack.hostVersion }}/VBoxGuestAdditions_{{ .pack.hostVersion }}.iso
       todir: /tmp
       unpack: false
-#    after: "{{ .templates }}/install.sh"
+    after: "{{ .templates }}/install.sh"
   - shell:
       cmd: "VBoxControl --nologo guestproperty get mac1 | cut -c 8-"
       out: mac1
