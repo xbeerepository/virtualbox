@@ -1,9 +1,6 @@
 labels:
   osid: centos
 actions:
-  - pkg: epel-release
-  - pkg: 
-      name: make gcc kernel-headers kernel-devel perl dkms bzip2
   - shell: "{{ .templates }}/network_centos.sh"
   
 
