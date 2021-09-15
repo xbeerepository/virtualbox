@@ -4,7 +4,6 @@ actions:
   - pkg: epel-release
   - pkg: 
       name: make gcc kernel-headers kernel-devel perl dkms bzip2
-      update: true
   - shell: "{{ .templates }}/network_centos.sh"
   
 
