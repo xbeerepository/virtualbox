@@ -1,10 +1,6 @@
 labels:
   osid: ubuntu
 actions:
-  - pkg: 
-      name: bzip2 build-essential dkms
-      update: true
-    after: apt-get install -y linux-headers-$(uname -r)
   - shell: "{{ .templates }}/network_ubuntu.sh"
 
   
