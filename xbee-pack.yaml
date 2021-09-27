@@ -5,8 +5,6 @@ type: provider
 var:
   memory: 512
   cpus: 1
-#hostVersion is set by xbee
-  hostVersion:
 #disk is defined by the system pack used to launch the vm
   disk:
 
