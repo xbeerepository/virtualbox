@@ -2,24 +2,13 @@ schema-version: 1.0
 
 type: provider
 
+provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbeeName %}-{% xbeeVersion %}.tar.gz
+
 var:
   memory: 512
   cpus: 1
 #disk is defined by the system pack used to launch the vm
   disk:
-
-const:
-  path: s3.eu-west-3.amazonaws.com/xbee.repository/providers
-
-
-provision:
-  - shell:
-      cmd: "VBoxControl --nologo guestproperty get mac1 | cut -c 8-"
-      out: mac1
-  - shell:
-      cmd: "VBoxControl --nologo guestproperty get mac2 | cut -c 8-"
-      out: mac2
-
 
 command:
   hostdata: "{{ .templates }}/hostdata.sh"
