@@ -13,8 +13,8 @@ in:
 provision:
   - shell:
       cmds: 
-        - mkdir -p /root/.xbee/cache
-        - mount -t vboxsf xbee /root/.xbee/cache
+        - mkdir -p /root/.xbee/cache-artefacts
+        - mount -t vboxsf xbee /root/.xbee/cache-artefacts
 
 
 command:
