@@ -2,7 +2,7 @@ schema-version: 1.0
 
 type: provider
 
-provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbeeName %}-{% xbeeVersion %}.tar.gz
+provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{{ .xbee.name }}-{{ .xbeeVersion }}.tar.gz
 local: true
 
 in:
