@@ -5,7 +5,7 @@ type: provider
 provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{{ .xbee.name }}-{{ .xbeeVersion }}.tar.gz
 local: true
 
-var:
+in:
   memory: 512
   cpus: 1
 #disk is defined by the system pack used to launch the vm
