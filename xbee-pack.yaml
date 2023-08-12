@@ -13,7 +13,7 @@ in:
 
 
 command:
-  hostdata: "{{ .templates }}/hostdata.sh"
+  hostdata: "{{ .xbee.templates }}/hostdata.sh"
 
 
   
