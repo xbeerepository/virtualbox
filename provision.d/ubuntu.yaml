@@ -1,6 +1,6 @@
 labels:
   osid: ubuntu
 actions:
-  - shell: "{{ .templates }}/network_ubuntu.sh"
+  - shell: "{{ .xbee.templates }}/network_ubuntu.sh"
 
   
