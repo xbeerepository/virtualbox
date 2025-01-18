@@ -1,19 +1,18 @@
 schema-version: 1.0
 
-type: provider
-
 provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{{ .xbee.name }}-{{ .xbee.version }}.tar.gz
 local: true
 
-in:
+host:
   memory: 512
   cpus: 1
+
+system:
 #disk is defined by the system pack used to launch the vm
   disk:
 
+volume:
 
-command:
-  hostdata: "{{ .xbee.templates }}/hostdata.sh"
 
 
   
