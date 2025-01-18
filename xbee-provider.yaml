@@ -1,6 +1,7 @@
 schema-version: 1.0
 
-provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{{ .xbee.name }}-{{ .xbee.version }}.tar.gz
+provider: https://s3.eu-west-3.amazonaws.com/xbee.repository.public/{{ .xbee.os }}_{{ .xbee.arch }}/{{ .xbee.name }}.gz
+
 local: true
 
 host:
