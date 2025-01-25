@@ -10,7 +10,8 @@ host:
 
 system:
 #disk is defined by the system pack used to launch the vm
-  disk: https://s3.eu-west-3.amazonaws.com/xbee.repository.public/virtualbox/ubuntu-24.04.vdi
+  disk:
+  ostype:
 
 volume:
 
