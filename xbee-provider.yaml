@@ -12,6 +12,7 @@ system:
 #disk is defined by the system pack used to launch the vm
   disk:
   ostype:
+  cloud-init:
 
 volume:
 
